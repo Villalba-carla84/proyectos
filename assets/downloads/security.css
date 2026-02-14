@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/* パスワード変更 */
+#M_changepw{
+	margin:40px 0;
+	background:#ddd;	
+	padding:15px;
+}
+#M_changepwTitle{
+	font-size:14px;	
+	margin:0 auto 10px;
+	font-weight:bold;
+}
+#M_changepwInner{
+	text-align:center;	
+}
+#M_changepwTxt{
+	text-align:left;
+	margin:10px auto;
+}
+#M_changepwTable{
+	border-collapse:collapse;	
+	width:500px;
+	margin:0 auto;
+	font-size:12px;
+	background:#fff;
+}
+#M_changepwTable th,
+#M_changepwTable td{
+	border:1px solid #bbb;	
+	padding:5px;
+}
+#M_changepwTable th{
+	text-align:left;
+	width:200px;	
+	background:#666;
+	color:#fff;
+}
+#M_changepwTable input{
+	width:100%;
+}	
+#M_changepwBox{
+	text-align:center;
+	margin:10px auto 0;	
+}
+#M_changepwBtn{
+	cursor:pointer;
+}
+
+/*　確認パスワード　*/
+#M_confirmpw{
+	border:1px solid #db9a9d;
+	padding:10px 15px;	
+	margin-top:10px;
+	background:#ffe6e7;
+}
+#M_confirmpw p{
+	float:left;	
+	margin:0;
+	line-height:30px;
+}
+#M_confirmpw th{
+	width:120px;
+	text-align:right;
+	font-weight:bold;
+	color:#cc0000;
+	font-size:12px;	
+}

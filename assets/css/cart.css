@@ -1,0 +1,31 @@
+/* ==========================================
+   CART PAGE STYLES
+   ========================================== */
+
+/* Cart button - higher specificity to override common.css */
+.main-contents#basket .btn-wrap-order .btn {
+	display: inline-block;
+	margin: 16px auto;
+	background: #368dc7;
+	color: #fff !important;
+	padding: 14px 32px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.main-contents#basket .btn-wrap-order .btn:hover {
+	background: #2a6fa3;
+}
+
+.btn-wrap {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.btn-wrap-order {
+	display: inline-block;
+}

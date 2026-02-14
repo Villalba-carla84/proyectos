@@ -1,0 +1,46 @@
+.container-loader.loader {
+  display: none;
+
+}
+
+.container-loader.loader.on {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      position: fixed;
+    z-index: 22222;
+    background: white;
+
+}
+
+
+
+@keyframes latido {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+
+.container-loader.loader img {
+  animation: latido 1s infinite;
+  transition: transform 0.2s ease-in-out;
+  width: 200px;
+
+}

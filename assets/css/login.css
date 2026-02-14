@@ -1,0 +1,214 @@
+/* ==========================================
+   LOGIN PAGE STYLES
+   ========================================== */
+
+/*.main{
+	padding:15px 30px;
+	background:#fff; 
+	border-width:1px; 
+	border-style:solid;
+	border-color:#ddd; 
+}*/
+.section {
+	overflow: hidden;
+	_zoom: 1;
+}
+
+.entry {
+	border-top-width: 1px;
+	/* 境目の罫線サイズ */
+	border-top-style: dotted;
+	/* 境目の罫線スタイル */
+	border-top-color: #ddd;
+	/* 境目の罫線色 */
+	padding-top: 40px;
+	margin-top: 40px;
+}
+
+.headImg {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.txt01 {
+	text-align: left;
+	line-height: 1.6;
+}
+
+.errortxt {
+	text-align: left;
+	color: #ff0000;
+	margin-top: 8px;
+}
+
+.loginform {
+	width: 390px;
+	margin: 20px auto 0;
+}
+
+.loginform th {
+	text-align: left;
+	min-width: 120px;
+	padding: 15px 8px;
+	background: #ccc;
+	/* テーブルの背景色（タイトル） */
+	font-size: 13px;
+	/* テーブルのフォントサイズ（タイトル） */
+	color: #333;
+	/* テーブルの文字色（タイトル） */
+}
+
+.loginform td {
+	text-align: left;
+	padding: 5px;
+	background: #eee;
+	/* テーブルの背景色（項目） */
+}
+
+.loginform td input {
+	width: 200px;
+	font-size: 13px;
+	/* テーブルのフォントサイズ（項目） */
+	color: #333;
+	/* テーブルの文字色（項目） */
+}
+
+.keeptxt {
+	width: 390px;
+	margin: 4px auto 15px;
+}
+
+.passwdtxt {
+	width: 390px;
+	text-align: left;
+	margin: 4px auto 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+/* Login page specific btn styles - higher specificity to override common.css */
+.container_contents .section .btn {
+	margin-top: 20px;
+	display: block;
+	background: transparent;
+	padding: 0;
+}
+
+.container_contents .section .btn input,
+.container_contents .section .btn a {
+	cursor: pointer;
+	padding: 2px 10px;
+	display: inline-block;
+	background: #368dc7;
+	color: #fff !important;
+	border: none;
+	text-decoration: none;
+}
+
+.container_contents .section .btn input:hover,
+.container_contents .section .btn a:hover {
+	background: #2a6fa3;
+}
+
+.link {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+/* buy */
+.buyEntry {
+	margin: 0 auto;
+}
+
+.buyNmember {
+	margin: 0 0 10px 20px;
+}
+
+.buyBorder {
+	border-right-width: 1px;
+	/* 境目の罫線サイズ */
+	border-right-style: dotted;
+	/* 境目の罫線スタイル */
+	border-right-color: #ddd;
+	/* 境目の罫線色 */
+}
+
+.buyWrap td {
+	padding: 0;
+	width: 50%;
+	vertical-align: top;
+}
+
+/* footer */
+.footer {
+	margin-top: 30px;
+}
+
+.shoplink {
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+.seal {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.sealimg img {
+	border: 5px solid #fff;
+}
+
+.sealtxt {
+	text-align: left;
+	font-size: 10px;
+	padding-left: 10px;
+	color: #666;
+	/* フッターの文字色 */
+}
+
+/* lockes */
+
+#locked .main {
+	padding: 30px 30px 0 30px;
+}
+
+.errorContents {
+	background: #ffeeee;
+	padding: 16px;
+	text-align: left;
+	margin: 16px auto;
+	color: #ff0000;
+}
+
+/* amazon */
+.amazon-login-v2 {
+	max-width: 250px;
+	height: 40px;
+	margin: 0 auto 20px;
+}
+
+.amazon-wrap {
+	padding-top: 30px;
+}
+
+.amazon-wrap p {
+	text-align: center;
+	margin: 0 auto 10px;
+	line-height: 1.6;
+}
+
+.amazon-title {
+	line-height: 1;
+	font-size: 15px;
+	margin: 0 auto 10px;
+	font-weight: 700;
+}
+
+a:hover img {
+	filter: alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+}

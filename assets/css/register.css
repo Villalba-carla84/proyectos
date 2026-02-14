@@ -1,0 +1,124 @@
+/* ==========================================
+   REGISTER PAGE STYLES
+   ========================================== */
+
+.base02 {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+}
+
+
+.p-page__container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 30px;
+}
+
+.p-page__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.c-alert {
+  background-color: #eaf4ff;
+  border-left: 4px solid #3399ff;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* Secciones */
+.p-page__section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #3399ff;
+  padding-bottom: 4px;
+}
+
+/* Tabla de formulario */
+.c-form__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.c-form__table th,
+.c-form__table td {
+  padding: 12px 8px;
+  vertical-align: top;
+}
+
+.c-form__title {
+  width: 30%;
+  font-weight: bold;
+  font-size: 14px;
+  color: #444;
+}
+
+.c-form__title--must {
+  color: #d00;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.c-form__content {
+  width: 70%;
+}
+
+.c-form__note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Inputs */
+.c-input--text,
+.c-input--select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.c-input--text:focus,
+.c-input--select:focus {
+  border-color: #3399ff;
+  outline: none;
+}
+
+/* Botón */
+.c-button__group {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.c-button {
+  padding: 12px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.c-button--primary {
+  background-color: #368dc7;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.c-button--primary:hover {
+  background-color: #007acc;
+}
+
+.c-button--lg {
+  font-size: 18px;
+}

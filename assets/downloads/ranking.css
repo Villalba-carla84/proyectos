@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.M_rankingCenter .M_ranking{
+	margin-bottom:15px;
+	_zoom: 1;
+	overflow:hidden;
+    padding-left:0;
+}
+
+.M_rankingCenter .M_ranking li{
+	margin-bottom:10px;
+	border-left:1px dotted #ccc;
+	margin-left:-1px;
+	list-style:none;
+}
+
+.M_rankingCenter .M_ranking li p{
+	text-align:center;
+}
+
+.M_rankingCenter .M_ranking li.midImg{
+	float:left;
+	width:146px;
+}
+
+* html .M_rankingCenter .M_ranking li.midImg{
+	display:inline;
+	width:146px;
+}
+
+.M_rankingCenter .M_ranking li.midImg img{
+	width:100px;
+}
+
+.M_rankingCenter .M_ranking li.smallImg{
+	float:left;
+	width:103px;
+}
+
+* html .M_rankingCenter .M_ranking li.smallImg{
+	display:inline;
+	width:103px;
+}
+
+.M_rankingCenter .M_ranking li.smallImg img{
+	width:50px;
+}
+
+.M_rank1{
+	background:url(/images/block/ranking/crown1.png) no-repeat center center;
+	text-indent:-9999px;
+	height:32px;
+}
+
+.M_rank2{
+	background:url(/images/block/ranking/crown2.png) no-repeat center center;
+	text-indent:-9999px;
+	height:32px;
+}
+
+.M_rank3{
+	background:url(/images/block/ranking/crown3.png) no-repeat center center;
+	text-indent:-9999px;
+	height:32px;
+}
+
+.M_rank{
+	height:30px;
+	font-weight:bold;
+	font-size:14px;
+	padding-top:8px;
+	text-align:center;
+}
+
+.M_rankingBox{
+    padding:0;
+}
+
+.M_rankingBox li{
+	margin-bottom:10px;
+	list-style:none;
+}
+
+.M_rankingBox li.midImg img{
+	width:100px;
+}
+
+.M_rankingBox li.smallImg img{
+	width:50px;
+}
+
+.M_rankingBox li div,.M_rankingBox li p{
+	text-align:center;
+}
+
+.M_rankingBox li .rankImg{
+	margin:3px 0;
+	padding-bottom:4px;
+}
+
+.M_rankingBox .M_rank{
+	height:auto;
+	font-weight:bold;
+	font-size:14px;
+	padding-top:0px;
+	text-align:center;
+}
+

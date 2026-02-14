@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+#M_topicPathWrap ul,#M_topicPath li{
+	margin:0;
+	padding:0;	
+	text-align:left;
+	list-style:none;
+}
+#M_topicPathWrap li{
+	display:inline;
+	background:url(/images/common/topicpath_arrow.png) no-repeat right top;
+	padding-right:12px;
+	margin-right:4px;
+}
+#M_topicPathWrap li.M_current{
+	background:none;
+	padding-right:0;
+}

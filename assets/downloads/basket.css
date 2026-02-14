@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.M_headBasket{
+	float: right;
+	width:126px;
+	padding:3px 3px 0 3px;
+	border:1px solid #b3b3b3;
+	margin:0 0 5px 5px;
+	background:#ededed;
+}
+#M_headBasketSwitch{
+	position: relative;
+	width: 126px;
+	height: 26px;
+	z-index: 999;
+	float:right;
+}
+#M_headBasketIn{
+	clear:both;
+	font-size: 11px;
+	text-align:right;
+	padding:2px 0;
+	width:126px;
+}
+#M_headBasketIn em{
+	color:#ff0000;
+	font-style:normal;
+	font-weight:bold;	
+}
+#M_basketClosedBox{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 126px;
+	height: 26px;
+	cursor:pointer;
+	text-indent:-9999em;
+	text-align:left;
+}
+#M_basketClosedBox a{
+	display:block;
+	width: 126px;
+	height: 26px;	
+}
+#M_basketTemp1 #M_basketClosedBox{
+	background:url("/images/basket/headBasketSwitch1.png") no-repeat;
+}
+#M_basketTemp2 #M_basketClosedBox{
+	background:url("/images/basket/headBasketSwitch2.png") no-repeat;
+}
+#M_basketTemp3 #M_basketClosedBox{
+	background:url("/images/basket/headBasketSwitch3.png") no-repeat;
+}
+#M_basketOpenedBox{
+	position: absolute;
+	right: 0;
+	top: 25px;
+	width:200px;
+	height: auto;
+	background:#ffebeb;
+	display: none;
+	border:1px solid #b00000;
+}
+.M_headBasket table{
+	margin:3px 10px;
+	width:178px;
+}
+.M_headBasket td{
+    font-size: 12px;
+    padding:6px 2px;
+	border-bottom:1px dotted #999;
+}
+.M_headBasket td.M_headImg{	
+	width:44px;
+}
+.M_headBasket td.M_headNum{
+	text-align:right;	
+	white-space: nowrap;
+}
+.M_headBasket tr#last-child td{
+	border-bottom:none;
+}
+.M_headBasket a{
+	color:#333;
+	text-decoration:underline;	
+}
+.M_headBasket a:hover{
+	color:#666;
+	text-decoration:none;	
+}
+
+/**************************************************
+
+    名入れ
+
+/*************************************************/
+
+.M_nameTxt{
+	margin-bottom:16px;
+}	
+.M_nameList li{
+	margin-bottom:16px;	
+	text-align:left;
+}
+.M_nameItem{
+	margin-bottom:8px;	
+}
+.M_nameFix{
+	width:98%;
+	padding:2px 4px;
+	background:#e8e8e8;	
+	border:1px dotted #c9c9c9;
+}
+#basketTable .addName td{
+	border-bottom-style:dashed;	
+}
+
+#basketTable a img.nameQunantity{
+	float:none;
+	margin-top:8px;	
+}
+#basketTable .basketQunantity td{
+	border:none;	
+}
+
+
+/* コンビニ決済・ebank用 */
+.nameWrap{
+	margin:10px 0;	
+}
+.nameTxt{
+	margin-bottom:4px;
+}	
+.nameList li{
+	margin-bottom:8px;	
+	text-align:left;
+}
+.nameFix{
+	padding-left:15px;
+}	
+.nameItem{
+	margin-bottom:8px;	
+}
+.nameAmount{
+	text-align:right;
+	border-top:1px dotted #ccc;
+	padding:6px;
+}

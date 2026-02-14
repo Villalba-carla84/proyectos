@@ -1,0 +1,861 @@
+/* =================================
+   LAYOUT - ESTILOS DEL MENÚ Y HEADER
+   ================================= */
+
+/* --- MENÚ HAMBURGUESA MOBILE MEJORADO --- */
+@media (max-width: 1024px) {
+  /* Overlay hamburguesa: menú ocupa toda la pantalla */
+  .global_nav.global_nav_on {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 85vw !important;
+    max-width: 420px !important;
+    height: 100vh !important;
+    background: rgba(255,255,255,0.98) !important;
+    z-index: 2000 !important;
+    overflow: hidden !important;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  /* Search fijo arriba */
+  .global_nav_on #hd-search {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 2100;
+    padding: 18px 14px 12px 14px;
+    border-bottom: 2px solid #eee;
+  }
+
+  /* Menú scrollable debajo del search */
+  .global_nav_wrap {
+    flex: 1 1 auto;
+    overflow-y: auto !important;
+    padding: 0 0 48px 0 !important;
+  }
+
+  /* Menú principal vertical */
+  .M_layer1 {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  /* Ítems principales aún más grandes y legibles */
+  .M_layer1 > li {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .M_layer1 > li > a {
+    font-size: 3.2rem !important;
+    font-weight: 900 !important;
+    padding: 32px 24px 32px 32px !important;
+    border-bottom: 3px solid #e0e0e0 !important;
+    color: #222 !important;
+    letter-spacing: 0.04em;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Submenús (M_layer2) como lista desplegable vertical */
+  .M_layer2 {
+     display: none !important;
+     background: #f7f7fa !important;
+     margin: 0 !important;
+     border-left: 6px solid #4838c7 !important;
+     box-shadow: none !important;
+     padding: 0 !important;
+     width: 100% !important;
+     position: static !important;
+     flex-direction: column !important;
+  }
+
+  .M_layer2.active {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 16px !important;
+  }
+
+  .M_layer2 > li {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .M_layer2 > li > a {
+    font-size: 2.7rem !important;
+    padding: 30px 20px 30px 52px !important;
+    color: #333 !important;
+    border-bottom: 3px solid #ececec !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Submenús de marcas (M_layer3) como lista desplegable vertical */
+  .M_layer3 {
+    display: none !important;
+    flex-direction: column !important;
+  }
+  
+  .M_layer3.active {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #fff !important;
+    margin: 0 !important;
+    border-left: 5px solid #bdbdf7 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+    position: static !important;
+  }
+
+  .M_layer3 li {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .M_layer3 li a {
+    font-size: 2.4rem !important;
+    padding: 28px 20px 28px 70px !important;
+    color: #444 !important;
+    border-bottom: 2px solid #f3f3f3 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Mejorar el scroll visual */
+  .global_nav_wrap::-webkit-scrollbar {
+    width: 10px;
+  }
+  .global_nav_wrap::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 5px;
+  }
+  .global_nav_wrap::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Aumentar área clickeable del menú hamburguesa */
+  .menu-trigger {
+    z-index: 2101;
+  }
+}
+
+/* Desktop: search visible en el header */
+.header_search {
+  display: block;
+}
+
+/* Desktop: ocultar secciones categorizadas, solo mostrar marcas */
+@media (min-width: 1025px) {
+  #M_ctg1_4, /* SHOES */
+  #M_ctg1_5, /* APPAREL */
+  #M_ctg1_6, /* BALL */
+  #M_ctg1_7, /* SUPPORTER */
+  #M_ctg1_8, /* GOODS */
+  #M_ctg1_10 /* NUTRITION */ {
+    display: none !important;
+  }
+
+  /* Carrito desktop con ícono original */
+  #M_headBasketIn {
+    display: inline-block !important;
+    font-size: 1.2rem !important;
+    padding: 0 !important;
+    padding-left: 30px !important;
+    background: url(https://gigaplus.makeshop.jp/mizosports/img/common/ico_cart.svg) center left no-repeat !important;
+    background-size: 21px 18px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Mobile: ocultar sección de marcas, solo mostrar categorías */
+@media (max-width: 1024px) {
+  #M_ctg1_9 {
+    display: none !important;
+  }
+}
+
+/* Estilos para el menú de usuario logeado */
+#header_user_menu {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#header_user_name {
+  color: #333;
+  font-size: 14px;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.header_logout_btn {
+  color: #368dc7;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header_logout_btn:hover {
+  color: #76b3e8;
+}
+
+/* Submenús compactos para desktop */
+@media (min-width: 1025px) {
+  .M_layer1 {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  /* Por defecto, TODOS los M_layer2 ocultos */
+  .M_layer2 {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 8px 0;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: visible !important;
+    min-width: 520px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  /* Solo mostrar el M_layer2 de items con submenu (tiene .show) */
+  .M_layer2.show {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* M_layer2 de SHOES específicamente siempre oculto */
+  #M_ctg1_4 .M_layer2 {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .M_layer2 li {
+    padding: 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0;
+    position: relative;
+  }
+
+  .M_layer2 li:last-child {
+    border-bottom: none;
+  }
+
+  .M_layer2 li a {
+    font-size: 12px !important;
+    display: block !important;
+    padding: 8px 12px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease !important;
+    white-space: normal !important;
+  }
+
+  .M_layer2 li a:hover {
+    background: #f0f0f0;
+    color: #000;
+    text-decoration: none !important;
+  }
+
+  /* Submenús level 3 - Aparecen a la DERECHA DENTRO del M_layer2 */
+  .M_layer3 {
+    display: block !important;
+    position: absolute !important;
+    left: 250px !important;
+    top: 0 !important;
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    border-radius: 3px !important;
+    min-width: 200px !important;
+    z-index: 1001 !important;
+    padding: 10px 0 !important;
+    max-height: 300px !important;
+    overflow-y: auto !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s ease, visibility 0.2s ease !important;
+    pointer-events: none !important;
+  }
+
+  /* Mostrar M_layer3 solo al hover en su item padre */
+  .M_layer2 li:hover .M_layer3 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .M_layer3 li {
+    padding: 0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    margin: 0 !important;
+    display: inline-block !important;
+    width: 48% !important;
+    vertical-align: top !important;
+  }
+
+  .M_layer3 li:last-child {
+    border-bottom: none !important;
+  }
+
+  .M_layer3 li a {
+    font-size: 11px !important;
+    display: block !important;
+    padding: 8px 12px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease !important;
+  }
+
+  .M_layer3 li a:hover {
+    background: #e8e8e8 !important;
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+}
+
+/* MOBILE: desactivar hover del M_layer3, usar click */
+@media (max-width: 1024px) {
+  /* Mostrar el submenú de marcas (M_layer3) cuando está activo en mobile */
+  .M_layer2 .M_layer3 {
+    display: none !important;
+  }
+
+  .M_layer2 .M_layer3.active {
+    display: block !important;
+    position: static !important;
+    background: #fff;
+    margin-left: 10px;
+    box-shadow: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1002;
+  }
+  .M_layer2 li:hover .M_layer3 {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* Mostrar submenús cuando tengan la clase .active en mobile (<=1024px) */
+  .M_layer2,
+  .M_layer3 {
+    display: none !important;
+  }
+
+  .M_layer2.active,
+  .M_layer3.active {
+    display: block !important;
+  }
+
+  /* Más especificidad para sobrescribir selectores con IDs en common.css */
+  #M_ctgList2 .M_layer2.active,
+  #M_ctgList2 .M_layer3.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Mostrar menú hamburguesa y panel móvil en el mismo lugar que el menú desktop */
+  #trigger_nav {
+    display: block !important;
+    position: relative;
+    z-index: 1100;
+  }
+
+  .menu-trigger {
+    display: inline-block !important;
+    width: 36px;
+    height: 28px;
+    cursor: pointer;
+  }
+
+  .menu-trigger span {
+    display: block;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .menu-trigger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-trigger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Panel móvil: usa el mismo contenedor del nav pero en modo bloque */
+  .global_nav {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #fff !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+    z-index: 1099 !important;
+    max-height: calc(100vh - 64px) !important;
+    overflow-y: auto !important;
+  }
+
+  .global_nav.global_nav_on {
+    display: block !important;
+  }
+
+  .global_nav_wrap {
+    padding: 12px !important;
+  }
+
+  /* Convertir capas a estructura vertical para mobile */
+  .M_layer1 {
+    display: block !important;
+  }
+
+  .M_layer1 > li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .M_layer1 > li > a {
+    display: block !important;
+    padding: 12px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+  }
+
+  .M_layer2,
+  .M_layer3 {
+    display: none !important;
+    padding-left: 12px !important;
+  }
+
+  .M_layer2.active {
+    display: block !important;
+  }
+}
+
+/* Estilos para que los submenús sean visibles en mobile */
+.global_nav_wrap {
+  overflow: visible !important;
+}
+
+#M_ctgList2 {
+  overflow: visible !important;
+}
+
+.M_layer3 {
+  overflow: visible !important;
+}
+
+/* Mobile: search dentro del menú hamburguesa */
+@media (max-width: 768px) {
+  .header_search {
+    margin-top: 2.5rem;
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 2rem 2.2rem;
+    font-size: 6.8rem !important;
+    border-radius: 28px;
+    border: 5px solid #4838c7;
+    box-sizing: border-box;
+  }
+
+  .search-button {
+    background: #4838c7;
+    border: none;
+    cursor: pointer;
+    padding: 2rem 3.6rem;
+    border-radius: 24px;
+    margin-left: 1.5rem;
+  }
+
+  .search-button img {
+    width: 6.8rem;
+    height: 6.8rem;
+  }
+
+  #header_user_menu {
+    display: block;
+    margin-left: 0;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 2px solid #ddd;
+  }
+
+  #header_user_name {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 3.2rem !important;
+  }
+
+  .header_logout_btn {
+    display: block;
+    padding: 14px 0;
+    font-size: 3.2rem !important;
+  }
+
+  /* Submenús visibles en mobile */
+  .M_layer2,
+  .M_layer3 {
+    position: static !important;
+    overflow: visible !important;
+    margin-left: 32px;
+    display: none;
+    max-height: none !important;
+  }
+
+  .M_layer2.active {
+    display: block !important;
+  }
+
+  .M_layer2 li,
+  .M_layer3 li {
+    display: block;
+  }
+}
+
+/* Mostrar/ocultar botón X solo en móvil y solo cuando el menú está abierto */
+@media (max-width: 1024px) {
+  #menu-close-btn {
+    display: none;
+  }
+  .global_nav.global_nav_on #menu-close-btn {
+    display: block !important;
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 3000;
+    background: #fff;
+    border: none;
+    font-size: 4.4rem;
+    font-weight: 900;
+    color: #4838c7;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    cursor: pointer;
+  }
+
+  /* ESTILOS GLOBALES MOBILE - TAMAÑOS AUMENTADOS */
+  
+  /* Banner/Logo */
+  .header_upper img[alt="sports"],
+  .header_upper a > img {
+    width: 300px !important;
+    max-width: 300px !important;
+    height: auto !important;
+  }
+
+  /* Ocultar guía de usuario en móviles */
+  .function_guide {
+    display: none !important;
+  }
+
+  /* Carrito visible en móviles - estilo similar a LOGIN/MYPAGE */
+  #M_headBasketIn {
+    display: inline-block !important;
+    font-size: 3.2rem !important;
+    padding: 12px 20px !important;
+    white-space: nowrap !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    background: none !important;
+  }
+
+  /* Header mobile optimizado */
+  .header_upper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 20px 16px !important;
+    gap: 20px !important;
+  }
+
+  .shopping_functions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .shopping_functions table {
+    display: flex !important;
+    gap: 15px !important;
+  }
+
+  .shopping_functions td {
+    display: flex !important;
+    gap: 15px !important;
+  }
+
+  .function_login,
+  .function_mypage {
+    font-size: 3.2rem !important;
+    padding: 12px 20px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Menú hamburguesa visible y más grande */
+  .menu-trigger {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    width: 100px !important;
+    height: 29px !important;
+    padding: 14px !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 2101 !important;
+    background: transparent !important;
+    border-radius: 10px !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .menu-trigger span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: #111112 !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  #trigger_nav {
+    display: block !important;
+  }
+
+  .header_lower {
+    width: 100% !important;
+  }
+
+  /* Títulos y encabezados */
+  h1, .ttl_content {
+    font-size: 5.8rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h2 {
+    font-size: 5rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h3 {
+    font-size: 4.4rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h4 {
+    font-size: 3.8rem !important;
+  }
+
+  /* Texto base */
+  body, p, div, span, td, th, li {
+    font-size: 3.4rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Prevenir corte de textos en mobile */
+  * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* Contenedores flexibles */
+  .container_contents,
+  .container_header,
+  .container_footer {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Textos largos */
+  p, div, span, td, th, li, a, label {
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  /* Títulos */
+  h1, h2, h3, h4, h5, h6 {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Inputs y formularios */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 3.8rem !important;
+    padding: 24px 28px !important;
+    min-height: 90px !important;
+  }
+
+  /* Botones */
+  button,
+  input[type="submit"],
+  input[type="button"],
+  .btn,
+  .button {
+    font-size: 4rem !important;
+    padding: 28px 48px !important;
+    min-height: 100px !important;
+  }
+
+  /* Labels */
+  label {
+    font-size: 3.6rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Tablas */
+  table {
+    font-size: 3.4rem !important;
+    width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  table th {
+    font-size: 3.8rem !important;
+    padding: 24px 20px !important;
+    word-wrap: break-word !important;
+  }
+
+  table td {
+    font-size: 3.4rem !important;
+    padding: 20px 16px !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Enlaces */
+  a {
+    font-size: 3.4rem !important;
+  }
+
+  /* Precios */
+  .price, .detail_price {
+    font-size: 5.8rem !important;
+  }
+
+  /* Container y espaciado */
+  .container_contents {
+    padding: 32px 24px !important;
+  }
+
+  /* Cards de productos */
+  .section-card-title {
+    font-size: 3.8rem !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .section-card-price {
+    font-size: 3.6rem !important;
+  }
+
+  /* Evitar desbordamiento horizontal */
+  body {
+    overflow-x: hidden !important;
+  }
+
+  #wrap {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Imágenes responsivas */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Mensajes y alertas */
+  .alert, .message, .error {
+    font-size: 3.6rem !important;
+    padding: 28px 32px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes adicionales para móviles pequeños */
+  
+  /* Banner para pantallas muy pequeñas */
+  .header_upper img[alt="sports"],
+  .header_upper a > img {
+    width: 280px !important;
+    max-width: 280px !important;
+  }
+
+  h1, .ttl_content {
+    font-size: 5.2rem !important;
+  }
+
+  h2 {
+    font-size: 4.6rem !important;
+  }
+
+  h3 {
+    font-size: 4rem !important;
+  }
+
+  body, p, div, span, td, th, li {
+    font-size: 3.2rem !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 3.6rem !important;
+  }
+
+  button,
+  input[type="submit"],
+  input[type="button"],
+  .btn,
+  .button {
+    font-size: 3.8rem !important;
+  }
+}

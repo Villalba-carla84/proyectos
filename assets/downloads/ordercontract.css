@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.M_ordercontractTitle{
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 48px;
+}
+
+.M_ordercontractWrap{
+    margin-bottom: 32px;
+}
+
+.M_ordercontractItem{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
+}

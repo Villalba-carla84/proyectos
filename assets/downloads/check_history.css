@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#recent {
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:15px;
+}
+#recent tr,#recent td{
+    padding:0;
+}
+#recent td.itemBox{
+    width:110px;
+    text-align:center;
+    vertical-align:top;
+}
+#recent td.itemImg{
+    width:110px;
+    text-align:center;
+
+}
+#recent td.line{
+    width:4px;
+}
+#recent p{
+    text-align:center;
+    margin:0;
+}
+#recent  .category{
+    font-weight:bold;
+}
+
+#leftRecent{
+    width:100%;
+    margin-bottom:5px;
+}
+#leftRecent .imgTd{
+    width:70px;
+    vertical-align: top;
+
+}
+#leftRecent .imgTd img{
+    margin:5px;
+    margin-bottom:0;
+}   
+#leftRecent .itemTd{
+    width:auto;
+}   
+#leftRecent .itemTd p{
+    margin:0;
+    padding:0;
+}
