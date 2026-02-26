@@ -27,7 +27,7 @@
 }
 
 .c-alert {
-  background-color: #eaf4ff;
+  background-color: #a8b0e3;
   border-left: 4px solid #3399ff;
   padding: 12px 16px;
   margin-bottom: 24px;
@@ -110,7 +110,7 @@
 }
 
 .c-button--primary {
-  background-color: #368dc7;
+  background-color: #8594f0;
   color: #fff;
   transition: background-color 0.3s ease;
 }

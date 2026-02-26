@@ -149,6 +149,10 @@
   display: block;
 }
 
+#footer .container_footer {
+  background: linear-gradient(135deg, #8594f0 0%, #dce8f7 100%) !important;
+}
+
 /* Desktop: ocultar secciones categorizadas, solo mostrar marcas */
 @media (min-width: 1025px) {
   #M_ctg1_4, /* SHOES */
@@ -158,6 +162,18 @@
   #M_ctg1_8, /* GOODS */
   #M_ctg1_10 /* NUTRITION */ {
     display: none !important;
+  }
+
+  .header_upper {
+    padding: 8px 70px !important;
+  }
+
+  .header_upper img[alt="sports"],
+  .header_upper a > img {
+    width: 260px !important;
+    height: 145px !important;
+    object-fit: cover;
+    object-position: center;
   }
 
   /* Carrito desktop con ícono original */
@@ -857,5 +873,239 @@
   .btn,
   .button {
     font-size: 3.8rem !important;
+  }
+}
+
+/* =================================
+   MOBILE OVERRIDE FINAL (COMPACTO)
+   ================================= */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px !important;
+  }
+
+  body {
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+    overflow-x: hidden !important;
+  }
+
+  h1, .ttl_content {
+    font-size: 1.6rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  h2 {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  h4 {
+    font-size: 1.15rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  p, div, span, td, th, li, a, label {
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 1rem !important;
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  button,
+  input[type="submit"],
+  input[type="button"],
+  .btn,
+  .button {
+    font-size: 1rem !important;
+    min-height: 44px !important;
+    padding: 10px 14px !important;
+  }
+
+  .container_contents,
+  .container,
+  .content_wrap,
+  .container_header,
+  .container_footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .container_contents {
+    padding: 16px 12px !important;
+  }
+
+  .menu-trigger {
+    width: 32px !important;
+    height: 24px !important;
+    padding: 0 !important;
+  }
+
+  .menu-trigger span {
+    height: 2px !important;
+  }
+
+  .global_nav.global_nav_on {
+    width: 84vw !important;
+    max-width: 320px !important;
+  }
+
+  .global_nav_on #hd-search {
+    padding: 10px 10px 8px !important;
+  }
+
+  .search-input {
+    font-size: 0.95rem !important;
+    padding: 8px 10px !important;
+    border-width: 1px !important;
+    border-radius: 8px !important;
+  }
+
+  .search-button {
+    padding: 8px 10px !important;
+    border-radius: 8px !important;
+    margin-left: 6px !important;
+  }
+
+  .search-button img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .M_layer1 > li > a {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    padding: 12px 14px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .M_layer2 > li > a {
+    font-size: 0.95rem !important;
+    padding: 10px 12px 10px 20px !important;
+  }
+
+  .M_layer3 li a {
+    font-size: 0.92rem !important;
+    padding: 8px 12px 8px 28px !important;
+  }
+
+  #M_headBasketIn,
+  .function_login,
+  .function_mypage,
+  .function_cart,
+  .function_guide {
+    font-size: 0.95rem !important;
+  }
+
+  .ttl_content,
+  .topicpath,
+  .pageTitle,
+  .orderTitle,
+  .cartTitle,
+  .loginTitle,
+  .mypageTitle,
+  .companyTitle {
+    text-align: center !important;
+  }
+
+  #trigger_nav {
+    display: block !important;
+    position: fixed !important;
+    top: 10px !important;
+    left: 10px !important;
+    width: auto !important;
+    padding: 0 !important;
+    z-index: 99999 !important;
+  }
+
+  .menu-trigger {
+    display: inline-block !important;
+    position: relative !important;
+    width: 32px !important;
+    height: 24px !important;
+    background: transparent !important;
+    border: none !important;
+    z-index: 100000 !important;
+  }
+
+  .menu-trigger span {
+    background: #111 !important;
+    height: 2px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  #trigger_nav {
+    display: block !important;
+    position: fixed !important;
+    top: 14px !important;
+    left: 14px !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    z-index: 99999 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid #d9d9d9 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12) !important;
+  }
+
+  .menu-trigger {
+    display: block !important;
+    position: relative !important;
+    width: 22px !important;
+    height: 16px !important;
+    margin: 14px auto !important;
+    padding: 0 !important;
+    z-index: 100000 !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .menu-trigger span {
+    position: absolute !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    margin: 0 !important;
+    background: #111 !important;
+    border-radius: 2px !important;
+  }
+
+  .menu-trigger span:nth-of-type(1) {
+    top: 0 !important;
+  }
+
+  .menu-trigger span:nth-of-type(2) {
+    top: 7px !important;
+  }
+
+  .menu-trigger span:nth-of-type(3) {
+    top: 14px !important;
+    bottom: auto !important;
   }
 }

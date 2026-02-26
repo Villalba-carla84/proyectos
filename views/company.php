@@ -39,7 +39,7 @@
                                                 </dl>
 
                                                 <dl class="M_ordercontractWrap" style="display: flex; align-items: flex-start; gap: 20px;">
-                                                    <dt class="M_ordercontractItem" style="min-width: 150px;">代表取締役社長</dt>
+                                                    <dt class="M_ordercontractItem" style="min-width: 150px;">代表者</dt>
                                                     <dd class="M_ordercontractDescription" style="margin: 0;">
                                                         上山知子
                                                     </dd>

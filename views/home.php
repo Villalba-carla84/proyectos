@@ -24,19 +24,19 @@ $products = json_decode($data, true);
 
 
           <div class="carousel-track">
-               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=NBA[エヌビーエー]"><img
-                              src="<?= URL_PATH ?>assets/img/imgHome/15953533551152.jpg" alt="imagen 1"></a></div>
-               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=JORDAN[ジョーダン]"><img
-                              src="<?= URL_PATH ?>assets/img/imgHome/bnr_jordan.jpg" alt="Imagen 2" /></a></div>
-               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=ZAMST[ザムスト]"><img
-                              src="<?= URL_PATH ?>assets/img/imgHome/banner_hozin.jpg" alt="Imagen 3" /></a></div>
-               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=Nike[ナイキ]"><img
-                              src="<?= URL_PATH ?>assets/img/imgHome/nike.jpg" alt="Imagen 4" /></a></div>
-               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=EGOZARU[エゴザル]"><img
-                              src="<?= URL_PATH ?>assets/img/imgHome/bnr_top_long_embroidery.jpg" alt="Imagen 5" /></a>
+               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=shoes"><img
+                              src="<?= URL_PATH ?>assets/img/imgHome/shoes.jpg" alt="imagen 1"></a></div>
+               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=apparel"><img
+                              src="<?= URL_PATH ?>assets/img/imgHome/apparel.jpg" alt="Imagen 2" /></a></div>
+              
+               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=goods"><img
+                              src="<?= URL_PATH ?>assets/img/imgHome/goods.jpg" alt="Imagen 4" /></a></div>
+               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=suport-item"><img
+                              src="<?= URL_PATH ?>assets/img/imgHome/support-item.jpg" alt="Imagen 5" /></a>
                </div>
-               <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=molten[モルテン]&t=バスケットボール"><img
-                              src="<?= URL_PATH ?>assets/img/imgHome/banner_ball.jpg" alt="Imagen 6" /></a></div>
+                <div class="carousel-item"><a href="<?= URL_PATH ?>section?s=balls"><img
+                              src="<?= URL_PATH ?>assets/img/imgHome/balls.jpg" alt="Imagen 3" /></a></div>
+               
           </div>
 
 

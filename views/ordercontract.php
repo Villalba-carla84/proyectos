@@ -51,13 +51,6 @@
 </dl>
 
 <dl class="M_ordercontractWrap" style="display: flex; align-items: flex-start; gap: 20px;">
-    <dt class="M_ordercontractItem" style="min-width: 200px;">申し込みの有効期限</dt>
-    <dd class="M_ordercontractDescription" style="margin: 0;">
-    原則、受注確認（受注確認の為の自動送信メール送信）後、7日間とします。
-    </dd>
-</dl>
-
-<dl class="M_ordercontractWrap" style="display: flex; align-items: flex-start; gap: 20px;">
     <dt class="M_ordercontractItem" style="min-width: 200px;">不良品</dt>
     <dd class="M_ordercontractDescription" style="margin: 0;">
     弊社ご連絡後の対応となります。

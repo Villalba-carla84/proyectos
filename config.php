@@ -3,9 +3,9 @@
     $urlPath = strtok($_SERVER["REQUEST_URI"], '?');
     $url = substr($urlPath,strlen($folderPath));
     define('EMAIL_SEND','t.k@supo-tsuhash1.jp'); // Cambia esto por tu correo real
-    define('TIENDA_NAME_1','合同会社ジンドウカン');
-    define('TIENDA_NAME_2','合同会社ジンドウカン');
-    define('TIENDA_NAME_3','合同会社ジンドウカン');
+    define('TIENDA_NAME_1','ジンドウカン');
+    define('TIENDA_NAME_2','ジンドウカン');
+    define('TIENDA_NAME_3','ジンドウカン');
 
     // echo '<pre> folderPath: ' , var_dump($folderPath) , '</pre>';
     // echo '<pre> urlPath: ' , var_dump($urlPath) , '</pre>';

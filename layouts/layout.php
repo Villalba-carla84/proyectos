@@ -2,17 +2,32 @@
 <html>
 
 <head>
+  <?php
+    $vShopCss = @filemtime(__DIR__ . '/../assets/downloads/shop.css') ?: time();
+    $vCommonCss = @filemtime(__DIR__ . '/../assets/downloads/common.css') ?: time();
+    $vIndexCss = @filemtime(__DIR__ . '/../assets/css/index.css') ?: time();
+    $vLayoutCss = @filemtime(__DIR__ . '/../assets/css/layout.css') ?: time();
+    $vHomeCss = @filemtime(__DIR__ . '/../assets/css/home.css') ?: time();
+    $vLoginCss = @filemtime(__DIR__ . '/../assets/css/login.css') ?: time();
+    $vRegisterCss = @filemtime(__DIR__ . '/../assets/css/register.css') ?: time();
+    $vCartCss = @filemtime(__DIR__ . '/../assets/css/cart.css') ?: time();
+    $vFinishOrderCss = @filemtime(__DIR__ . '/../assets/css/finishOrder.css') ?: time();
+    $vAllJs = @filemtime(__DIR__ . '/../assets/js/all.min.js') ?: time();
+    $vIndexJs = @filemtime(__DIR__ . '/../assets/js/index.js') ?: time();
+    $vWebJs = @filemtime(__DIR__ . '/../assets/js/web.js') ?: time();
+  ?>
   <meta http-equiv="Content-Language" content="ja">
   <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-  <link rel="stylesheet" href="<?= URL_PATH ?>assets/downloads/shop.css?20171026" type="text/css">
-  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/downloads/common.css?1759714665">
-  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/index.css">
-  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/layout.css">
-  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/home.css">
-  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/login.css">
-  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/register.css">
-  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/cart.css">
-  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/finishOrder.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="<?= URL_PATH ?>assets/downloads/shop.css?v=<?= $vShopCss ?>" type="text/css">
+  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/downloads/common.css?v=<?= $vCommonCss ?>">
+  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/index.css?v=<?= $vIndexCss ?>">
+  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/layout.css?v=<?= $vLayoutCss ?>">
+  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/home.css?v=<?= $vHomeCss ?>">
+  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/login.css?v=<?= $vLoginCss ?>">
+  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/register.css?v=<?= $vRegisterCss ?>">
+  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/cart.css?v=<?= $vCartCss ?>">
+  <link type="text/css" rel="stylesheet" href="<?= URL_PATH ?>assets/css/finishOrder.css?v=<?= $vFinishOrderCss ?>">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     const URL_PATH = '<?= URL_PATH ?>';
@@ -31,9 +46,9 @@
   </title>
 
 
-  <script src="<?= URL_PATH ?>assets/js/all.min.js"></script>
-  <script src="<?= URL_PATH ?>assets/js/index.js"></script>
-      <script src="<?= URL_PATH ?>assets/js/web.js"></script>
+  <script src="<?= URL_PATH ?>assets/js/all.min.js?v=<?= $vAllJs ?>"></script>
+  <script src="<?= URL_PATH ?>assets/js/index.js?v=<?= $vIndexJs ?>"></script>
+      <script src="<?= URL_PATH ?>assets/js/web.js?v=<?= $vWebJs ?>"></script>
       <style>
         @media (max-width: 1024px) {
           .M_layer3 {
@@ -41,7 +56,6 @@
           }
         }
       </style>
-      </script>
   <script>
     // Mostrar/ocultar botón X para cerrar menú hamburguesa
     function toggleMenuCloseBtn(show) {
@@ -87,7 +101,7 @@
         <div id="container_header" class="container_header">
           <div class="container_header_inner">
             <div class="header_upper">
-              <a href="<?= URL_PATH ?>"><img src="<?= URL_PATH ?>assets/img/banner.png" alt="sports" width="150"></a>
+              <a href="<?= URL_PATH ?>"><img src="<?= URL_PATH ?>assets/img/banner1.png" alt="sports" width="250"></a>
               <div class="shopping_functions" style="    display: flex; gap: 15px;">
                 <table border="0" cellpadding="0" cellspacing="0">
                   <tbody>

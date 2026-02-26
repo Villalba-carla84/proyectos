@@ -3,12 +3,13 @@
    ========================================== */
 
 .carousel {
-     width: 96vw;
-     max-width: 1080px;
-     margin: 0 auto;
+     width: 88vw;
+     max-width: 920px;
+     margin: 10px auto 22px;
      /* padding-top: 2%; */
-     background: #000000;
-     border-radius: 10px;
+     background: #ffffff;
+     border-radius: 14px;
+     border: 1px solid #e6ebf7;
      box-shadow: 0 8px 32px rgba(72,56,199,0.10), 0 1.5px 8px rgba(0,0,0,0.07);
      overflow: hidden;
      position: relative;
@@ -17,7 +18,7 @@
      align-items: center;
      justify-content: center;
      /* border: 2px solid #bdbdf7; */
-     min-height: 220px;
+     min-height: 0;
 }
 
 
@@ -36,8 +37,8 @@ height: 250px;
 
 .carousel-item {
      flex-shrink: 0;
-     width: 96vw;
-     max-width: 1080px;
+     width: 88vw;
+     max-width: 920px;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -52,7 +53,8 @@ height: 250px;
      height: auto;
      max-height: 260px;
      object-fit: cover;
-     border-radius: 14px;
+     display: block;
+     border-radius: 12px;
      box-shadow: 0 4px 24px rgba(72,56,199,0.10);
      border: 2px solid #e0e7ff;
      transition: transform 0.4s cubic-bezier(.77,0,.18,1);
@@ -84,7 +86,7 @@ height: 250px;
      border: none;
      border-radius: 50%;
      cursor: pointer;
-     background: rgba(72,56,199,0.13);
+     background: rgba(72,56,199,0.16);
      box-shadow: 0 2px 8px rgba(72,56,199,0.10);
      transition: background 0.3s, box-shadow 0.3s;
      pointer-events: auto;
@@ -108,7 +110,7 @@ height: 250px;
 
 .pagination {
      position: absolute;
-     bottom: 18px;
+     bottom: 14px;
      left: 50%;
      transform: translateX(-50%);
      display: flex;
@@ -142,13 +144,21 @@ height: 250px;
      .carousel {
 
           max-width: 100vw;
-          min-height: 400px;
+          min-height: 0;
           border-radius: 10px;
+          margin: 8px auto 14px;
+     }
+
+     .carousel-item {
+          width: 100vw;
+          max-width: 100vw;
      }
 
      .carousel-item img {
 
-          max-height: 400px;
+          max-height: none;
+          height: auto;
+          object-fit: contain;
           border-radius: 8px;
      }
 

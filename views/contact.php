@@ -30,7 +30,7 @@
         #contact .btnWrap input[type="submit"] {
             display: inline-block !important;
             padding: 15px 40px;
-            background: #368dc7;
+            background: #8594f0;
             color: #fff !important;
             text-decoration: none;
             border-radius: 4px;

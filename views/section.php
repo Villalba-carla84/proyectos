@@ -3,10 +3,6 @@ $data = file_get_contents('./const/products.json');
 $products = json_decode($data, true);
 $filterProducts = [];
 $tagsUse = [];
-$MAX_LIMIT = 12;
-$SKIP = !empty($_GET['skip']) ? intval($_GET['skip']) : 0;
-$START_INDEX = $MAX_LIMIT * $SKIP;
-$LAST_INDEX = $START_INDEX + $MAX_LIMIT;
 $title = "";
 $type = !empty($_GET['q']) ? 'search' : 'section';
 $sortValue = "";
@@ -51,13 +47,38 @@ if (isset($_GET['s'])) {
   $filterProducts = [];
   $keyFind = "section";
   $valueFind = $_GET["s"];
-  $title = $_GET["s"];
-  for ($i = 0; $i < count($products); $i++) {
-    if (
-      isset($products[$i][$keyFind]) &&
-      in_array($valueFind, $products[$i][$keyFind])
-    ) {
-      array_push($filterProducts, $products[$i]);
+  $slug = strtolower(trim($valueFind));
+  $sectionAliases = [
+    'shoes' => ['シューズ'],
+    'apparel' => ['アパレル'],
+    'balls' => ['バスケットボール', 'ゴール・ボール', 'ボールバッグ', 'ボールバック・ボールカゴ・バッグ', 'サッカーボール', 'バレーボール', 'ハンドボール'],
+    'goods' => ['バッグ・その他', 'バッグ・グッズ', 'バッグ', 'バッグ・ソックス・その他', 'バッグ・タオル・ソックス', 'ソックス・バッグ・その他', 'タオル・バッグ・その他', 'その他', '記念品', '作戦盤', 'ホイッスル', '審判用品', 'ボールケア用品', 'シューズケア用品', 'ラインテープ・ライン引き', 'トレーニング', '備品'],
+    'suport-item' => ['サポーター', 'テーピング', 'テーピング・アイシング'],
+    'support-item' => ['サポーター', 'テーピング', 'テーピング・アイシング']
+  ];
+
+  if (isset($sectionAliases[$slug])) {
+    $title = strtoupper($slug);
+    for ($i = 0; $i < count($products); $i++) {
+      if (!isset($products[$i]['tag']) || !is_array($products[$i]['tag'])) {
+        continue;
+      }
+      foreach ($sectionAliases[$slug] as $aliasTag) {
+        if (in_array($aliasTag, $products[$i]['tag'])) {
+          array_push($filterProducts, $products[$i]);
+          break;
+        }
+      }
+    }
+  } else {
+    $title = $_GET["s"];
+    for ($i = 0; $i < count($products); $i++) {
+      if (
+        isset($products[$i][$keyFind]) &&
+        in_array($valueFind, $products[$i][$keyFind])
+      ) {
+        array_push($filterProducts, $products[$i]);
+      }
     }
   }
   $products = $filterProducts;
@@ -85,38 +106,86 @@ foreach ($filterProducts as $objeto) {
 }
 $countProducts = count($filterProducts);
 $tagsUse = array_keys($tagsUse);
-$pagesNumber = $SKIP + 1;
-$pagesNumberLast = $filterProducts ? ceil(count($filterProducts) / $MAX_LIMIT) : 0;
-$enable_next = !empty($filterProducts[$LAST_INDEX + 1]) ? true : false;
-$enable_prev = $START_INDEX !== 0 ? true : false;
-$filterProducts =  array_splice($filterProducts, $START_INDEX, $MAX_LIMIT);
+$itemsPerPage = 30;
+$pagesNumberLast = $countProducts > 0 ? (int) ceil($countProducts / $itemsPerPage) : 0;
+$pagesNumber = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+
+if ($pagesNumber < 1) {
+  $pagesNumber = 1;
+}
+if ($pagesNumberLast > 0 && $pagesNumber > $pagesNumberLast) {
+  $pagesNumber = $pagesNumberLast;
+}
+
+$enable_next = $pagesNumber < $pagesNumberLast;
+$enable_prev = $pagesNumber > 1;
+$filterProducts = array_values($filterProducts);
+$offset = ($pagesNumber - 1) * $itemsPerPage;
+$pagedProducts = array_slice($filterProducts, $offset, $itemsPerPage);
+
+$buildPageUrl = function ($pageNumber) {
+  $params = $_GET;
+
+  if ($pageNumber <= 1) {
+    unset($params['page']);
+  } else {
+    $params['page'] = $pageNumber;
+  }
+
+  $queryString = http_build_query($params);
+  return URL_PATH . 'section' . (!empty($queryString) ? '?' . $queryString : '');
+};
 
 ?>
 
 <link rel="stylesheet" href="<?= URL_PATH ?>assets/css/section_card.css">
 <div class="section-card-list">
-<?php for ($i = 0; $i < count($filterProducts); $i++) { ?>
-  <a href="<?= URL_PATH ?>item/<?= $filterProducts[$i]['id'] ?>" class="section-card">
+<?php for ($i = 0; $i < count($pagedProducts); $i++) { ?>
+  <a href="<?= URL_PATH ?>item/<?= $pagedProducts[$i]['id'] ?>" class="section-card">
     <div class="section-card-image">
       <img
-        <?php if(substr($filterProducts[$i]['img'][0], 0, strlen("http")) === "http" ){ ?>
-          src="<?= $filterProducts[$i]['img'][0] ?>"
+        <?php if(substr($pagedProducts[$i]['img'][0], 0, strlen("http")) === "http" ){ ?>
+          src="<?= $pagedProducts[$i]['img'][0] ?>"
         <?php  }else { ?>
-          src="<?= URL_PATH ?>assets/img/<?= $filterProducts[$i]['img'][0] ?>"
+          src="<?= URL_PATH ?>assets/img/<?= $pagedProducts[$i]['img'][0] ?>"
         <?php  } ?>
-        alt="<?= $filterProducts[$i]['title'] ?>"
+        alt="<?= $pagedProducts[$i]['title'] ?>"
         loading="lazy">
     </div>
     <div class="section-card-info">
       <div class="section-card-title">
-        <?= $filterProducts[$i]['title'] ?>
+        <?= $pagedProducts[$i]['title'] ?>
       </div>
       <div class="section-card-price">
-        <?= number_format($filterProducts[$i]['price'],0,'.',',') ?>円
+        <?= number_format($pagedProducts[$i]['price'],0,'.',',') ?>円
       </div>
     </div>
   </a>
 <?php } ?>
 </div>
+
+<?php if ($pagesNumberLast > 1) {
+  $startPage = max(1, $pagesNumber - 2);
+  $endPage = min($pagesNumberLast, $startPage + 4);
+  $startPage = max(1, $endPage - 4);
+?>
+  <nav class="section-pagination" aria-label="Productos por página">
+    <?php if ($enable_prev) { ?>
+      <a class="section-page-link" href="<?= $buildPageUrl($pagesNumber - 1) ?>" aria-label="Página anterior">Anterior</a>
+    <?php } ?>
+
+    <?php for ($page = $startPage; $page <= $endPage; $page++) { ?>
+      <?php if ($page == $pagesNumber) { ?>
+        <span class="section-page-link is-active" aria-current="page"><?= $page ?></span>
+      <?php } else { ?>
+        <a class="section-page-link" href="<?= $buildPageUrl($page) ?>"><?= $page ?></a>
+      <?php } ?>
+    <?php } ?>
+
+    <?php if ($enable_next) { ?>
+      <a class="section-page-link" href="<?= $buildPageUrl($pagesNumber + 1) ?>" aria-label="Página siguiente">Siguiente</a>
+    <?php } ?>
+  </nav>
+<?php } ?>
 
              

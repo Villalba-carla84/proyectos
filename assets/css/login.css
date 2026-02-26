@@ -101,7 +101,7 @@ label {
 	cursor: pointer;
 	padding: 2px 10px;
 	display: inline-block;
-	background: #368dc7;
+	background: #8594f0;
 	color: #fff !important;
 	border: none;
 	text-decoration: none;
@@ -109,7 +109,7 @@ label {
 
 .container_contents .section .btn input:hover,
 .container_contents .section .btn a:hover {
-	background: #2a6fa3;
+	background: #a8a2e1;
 }
 
 .link {

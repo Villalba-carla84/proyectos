@@ -16,20 +16,49 @@ for ($i = 0; $i < count($products); $i++) {
 
 <style>
     @media (max-width: 1024px) {
+        #makebanner,
+        #makebanner table,
+        #makebanner tbody,
+        #makebanner tr,
+        #makebanner td {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        #makebanner td[width="10"] {
+            display: none !important;
+            width: 0 !important;
+            padding: 0 !important;
+        }
+
+        #makebanner td[width="640"] {
+            display: block !important;
+            width: 100% !important;
+            padding: 0 !important;
+        }
+
+        .main-contents,
+        #detail {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+        }
+
         .item-wrap {
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             gap: 16px;
             margin-bottom: 32px;
         }
 
         .item-img {
             float: none;
-            width: 35%;
+            width: 100%;
             min-width: 0;
             padding-right: 0;
-            flex-shrink: 0;
+            flex-shrink: 1;
         }
 
         .item-img .bx-wrapper {
@@ -52,8 +81,9 @@ for ($i = 0; $i < count($products); $i++) {
 
         .item-detail {
             float: none;
-            width: 65%;
-            flex: 1;
+            width: 100%;
+            flex: none;
+            text-align: center;
         }
 
         .ttl_detail {
@@ -77,11 +107,11 @@ for ($i = 0; $i < count($products); $i++) {
         }
 
         .item-img {
-            width: 40%;
+            width: 100%;
         }
 
         .item-detail {
-            width: 60%;
+            width: 100%;
         }
 
         .ttl_detail {
@@ -95,7 +125,7 @@ for ($i = 0; $i < count($products); $i++) {
 
     /* Botón añadir al carrito */
     input[type="submit"] {
-        background: linear-gradient(135deg, #368dc7 0%, #4ba0d9 100%);
+        background: linear-gradient(135deg, #8594f0 0%, #4ba0d9 100%);
         color: #fff;
         border: none;
         border-radius: 12px;

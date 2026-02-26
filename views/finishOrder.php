@@ -733,7 +733,7 @@ A4サイズ以内・厚さ3cm以内・重さ1kg以内 を満たす商品に限�
     
     <!-- お支払い時期 -->
     <div class="pdng-t16">
-        <a href="/msports/pages/info" target="_blank" class="font-08 crl-accent hover-underline link-target-blank payment-period">
+        <a href="/jindokan/pages/info" target="_blank" class="font-08 crl-accent hover-underline link-target-blank payment-period">
             お支払い時期について
         </a>
     </div>
@@ -895,9 +895,9 @@ A4サイズ以内・厚さ3cm以内・重さ1kg以内 を満たす商品に限�
 
             <!------特定商取引法に基づく表記------>
     <div class="txt-center mg-tb24 return-policy-wrap">
-        <a href="/msports/ordercontract" class="font-09 crl-accent hover-underline link-target-blank" target="_blank" rel="noopener noreferrer">特定商取引法に基づく表記</a>
+        <a href="/jindokan/ordercontract" class="font-09 crl-accent hover-underline link-target-blank" target="_blank" rel="noopener noreferrer">特定商取引法に基づく表記</a>
 <span class="font-09">と</span>
-<a href="/msports/pages/privacy-policy" class="font-09 crl-accent hover-underline link-target-blank pdng-r4" target="_blank" rel="noopener noreferrer">個人情報の取り扱いについて</a><br>
+<a href="/jindokan/pages/privacy-policy" class="font-09 crl-accent hover-underline link-target-blank pdng-r4" target="_blank" rel="noopener noreferrer">個人情報の取り扱いについて</a><br>
 <a class="font-09 pdng-r4">に同意の上、ご注文ください。</a>
     </div>
     <!------特定商取引法に基づく表記------>
@@ -927,9 +927,9 @@ A4サイズ以内・厚さ3cm以内・重さ1kg以内 を満たす商品に限�
         <!------メッセージ------>
         <!------特定商取引法に基づく表記------>
         <div class="mg-tb24 flow-cta-return-policy txt-lineh-1-6">
-            <a href="/msports/ordercontract" class="font-09 crl-accent hover-underline link-target-blank" target="_blank" rel="noopener noreferrer">特定商取引法に基づく表記</a>
+            <a href="/jindokan/ordercontract" class="font-09 crl-accent hover-underline link-target-blank" target="_blank" rel="noopener noreferrer">特定商取引法に基づく表記</a>
 <span class="font-09">と</span>
-<a href="/msports/pages/privacy-policy" class="font-09 crl-accent hover-underline link-target-blank pdng-r4" target="_blank" rel="noopener noreferrer">個人情報の取り扱いについて</a><br>
+<a href="/jindokan/pages/privacy-policy" class="font-09 crl-accent hover-underline link-target-blank pdng-r4" target="_blank" rel="noopener noreferrer">個人情報の取り扱いについて</a><br>
 <a class="font-09 pdng-r4">に同意の上、ご注文ください。</a>
         </div>
         <!------特定商取引法に基づく表記------>
