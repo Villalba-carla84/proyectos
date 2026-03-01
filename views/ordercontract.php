@@ -29,7 +29,7 @@
 <dl class="M_ordercontractWrap" style="display: flex; align-items: flex-start; gap: 20px;">
     <dt class="M_ordercontractItem" style="min-width: 200px;">電話番号</dt>
     <dd class="M_ordercontractDescription" style="margin: 0;">
-   0723-91-7783
+    072-391-7783
 
     </dd>
 </dl>
