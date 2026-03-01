@@ -546,7 +546,7 @@
 
               <p class="btn_contact_wrap"><a href="<?= URL_PATH ?>contact" class="btn_contact">CONTACT</a></p>
             </div>
-            <p class="copyright">© 2025 JINDŌKAN </p>
+            <p class="copyright">© 2025 合同会社ジンドウカン<br>- 無断転載・転用禁止</p>
             <p><a id="page_top"></a></p>
           </div>
         </div>
